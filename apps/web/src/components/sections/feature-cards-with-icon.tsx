@@ -8,6 +8,7 @@ import avatar4 from "@/../public/images/avatar-owen-garcia.jpg";
 import { Tag } from "@/components/shared/tag";
 import type { PagebuilderType } from "@/types";
 import { RichText } from "../elements/rich-text";
+import { IncredibleHighlight } from "./incredible-highlight";
 
 type FeatureCardsWithIconProps = PagebuilderType<"featureCardsIcon">;
 
@@ -53,7 +54,13 @@ function AvatarsAnimation() {
           )}
         >
           <div className="relative size-full overflow-hidden rounded-full">
-            <Image src={src} alt={alt} fill className="object-cover" />
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              sizes="80px"
+              className="object-cover"
+            />
           </div>
         </div>
       ))}
@@ -63,6 +70,7 @@ function AvatarsAnimation() {
             src={avatar4}
             alt="Avatar 4"
             fill
+            sizes="80px"
             className="object-cover opacity-0 transition-all duration-500 group-hover:opacity-100"
           />
           <div className="flex size-full items-center justify-center gap-1">
@@ -82,19 +90,7 @@ function AvatarsAnimation() {
 function TextHighlightAnimation() {
   return (
     <p className="text-center text-4xl font-extrabold text-neutral-200 dark:text-white/20 transition duration-500 group-hover:text-neutral-200 dark:group-hover:text-white/10">
-      We&apos;ve achieved{" "}
-      <span className="relative bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-        <span>incredible</span>
-        <video
-          src="/gif-incredible.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl opacity-0 shadow-xl transition duration-500 group-hover:opacity-100"
-        />
-      </span>{" "}
-      <br />
+      We&apos;ve achieved <IncredibleHighlight /> <br />
       milestones this year.
     </p>
   );

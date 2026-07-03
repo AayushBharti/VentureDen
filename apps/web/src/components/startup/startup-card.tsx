@@ -45,7 +45,11 @@ export function StartupCard({ post }: { post: StartupCardItem }) {
 
   return (
     <article className="group relative h-full overflow-hidden rounded-2xl bg-white ring-1 ring-neutral-200/80 transition duration-300 hover:ring-pink-300/60 hover:shadow-lg hover:shadow-pink-500/5 dark:bg-neutral-900 dark:ring-white/10 dark:hover:ring-pink-500/30 dark:hover:shadow-pink-500/10">
-      <Link href={`/startup/${_id}`} className="flex h-full flex-col">
+      <Link
+        href={`/startup/${_id}`}
+        className="flex h-full flex-col"
+        prefetch={false}
+      >
         {/* Cover image */}
         <div className="relative aspect-video w-full overflow-hidden">
           <SanityImage
