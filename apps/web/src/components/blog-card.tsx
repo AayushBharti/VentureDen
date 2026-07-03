@@ -43,7 +43,11 @@ export function BlogCard({ blog }: BlogCardProps) {
 
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200/60 bg-white/80 shadow-sm backdrop-blur-sm transition duration-300 hover:border-pink-500/20 hover:shadow-md hover:bg-neutral-50/80 dark:border-white/10 dark:bg-neutral-900/60 dark:shadow-none dark:hover:bg-neutral-800/60 dark:hover:shadow-none">
-      <Link href={slug ?? "#"} className="flex flex-1 flex-col">
+      <Link
+        href={slug ?? "#"}
+        className="flex flex-1 flex-col"
+        prefetch={false}
+      >
         {/* Cover image */}
         <div className="relative aspect-video w-full overflow-hidden">
           {image?.id ? (
@@ -113,7 +117,11 @@ export function FeaturedBlogCard({ blog }: BlogCardProps) {
 
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-neutral-200/60 bg-white/80 shadow-sm backdrop-blur-sm transition duration-300 hover:border-pink-500/20 hover:shadow-md hover:bg-neutral-50/80 dark:border-white/10 dark:bg-neutral-900/60 dark:shadow-none dark:hover:bg-neutral-800/60 dark:hover:shadow-none">
-      <Link href={slug ?? "#"} className="grid grid-cols-1 lg:grid-cols-2">
+      <Link
+        href={slug ?? "#"}
+        className="grid grid-cols-1 lg:grid-cols-2"
+        prefetch={false}
+      >
         {/* Cover image */}
         <div className="relative aspect-video w-full overflow-hidden lg:aspect-auto lg:min-h-72">
           {image?.id ? (

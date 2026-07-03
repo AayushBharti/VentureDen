@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   experimental: {
     inlineCss: true,
+    optimizePackageImports: [
+      "motion",
+      "lucide-react",
+      "radix-ui",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-navigation-menu",
+    ],
     serverActions: {
       bodySizeLimit: "1mb",
     },
